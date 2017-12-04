@@ -1,0 +1,13 @@
+;  insert default records
+Do iRecordIDsRow.$sessionobject.$assign(iSQLObjRef)
+Calculate iRecordIDsRow.TableName as "Timesheet"
+Calculate iRecordIDsRow.RecordID as 0
+Do iRecordIDsRow.$insert()
+
+Calculate iRecordIDsRow.TableName as "TSDetail"
+Calculate iRecordIDsRow.RecordID as 0
+Do iRecordIDsRow.$insert()
+
+Calculate iRecordIDsRow.TableName as "Employee"
+Calculate iRecordIDsRow.RecordID as 0
+Do iRecordIDsRow.$insert()

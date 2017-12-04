@@ -1,0 +1,79 @@
+[
+	{
+		"ident": 32001,
+		"order": 1,
+		"properties": {
+			"alias": "",
+			"colname": "ID",
+			"desc": "",
+			"schema": "sTimesheet",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32002,
+		"order": 2,
+		"properties": {
+			"alias": "",
+			"colname": "TSDate",
+			"desc": "",
+			"schema": "sTimesheet",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32003,
+		"order": 3,
+		"properties": {
+			"alias": "",
+			"colname": "FirstName",
+			"desc": "",
+			"schema": "sEmployee",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32004,
+		"order": 4,
+		"properties": {
+			"alias": "",
+			"colname": "LastName",
+			"desc": "",
+			"schema": "sEmployee",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32005,
+		"order": 5,
+		"properties": {
+			"alias": "",
+			"colname": "EmpID",
+			"desc": "",
+			"schema": "sEmployee",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32006,
+		"order": 6,
+		"properties": {
+			"alias": "",
+			"colname": "EmpID",
+			"desc": "",
+			"schema": "sTimesheet",
+			"userinfo": ""
+		}
+	},
+	{
+		"ident": 32007,
+		"order": 7,
+		"properties": {
+			"alias": "",
+			"colname": "TotalHours",
+			"desc": "",
+			"schema": "sTimesheet",
+			"userinfo": ""
+		}
+	}
+]

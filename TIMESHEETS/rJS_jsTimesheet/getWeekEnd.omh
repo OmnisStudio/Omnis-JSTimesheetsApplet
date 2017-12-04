@@ -1,0 +1,9 @@
+Calculate iTSDate as #D
+Calculate lTodayDayOfWeek as dpart(kDayofWeek,iTSDate)
+Calculate lWkEndingDayOfWeek as dpart(kDayofWeek,getws())-1     ;; week ending day
+
+If lTodayDayOfWeek>lWkEndingDayOfWeek     ;; today is greater than startday of week, get next week end
+	Calculate datetofind as dadd(kDay,(7-lTodayDayOfWeek)+1,iTSDate)
+End If
+
+Calculate iTSDate as datetofind

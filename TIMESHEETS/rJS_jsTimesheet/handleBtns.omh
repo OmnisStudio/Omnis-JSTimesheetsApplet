@@ -1,0 +1,14 @@
+Switch pMode
+	Case kNewRecord
+		Do $cinst.$objs.pagePane.$objs.saveBtn.$enabled.$assign(kTrue)
+		Do $cinst.$objs.pagePane.$objs.cancelBtn.$enabled.$assign(kTrue)
+		Do $cinst.$objs.pagePane.$objs.newBtn.$visible.$assign(kFalse)
+	Case kNoRecord
+		Do $cinst.$objs.pagePane.$objs.saveBtn.$enabled.$assign(kFalse)
+		Do $cinst.$objs.pagePane.$objs.cancelBtn.$enabled.$assign(kFalse)
+		Do $cinst.$objs.pagePane.$objs.newBtn.$visible.$assign(kFalse)
+	Case kViewingDetail
+		Do $cinst.$objs.pagePane.$objs.saveBtn.$enabled.$assign(kFalse)
+		Do $cinst.$objs.pagePane.$objs.cancelBtn.$enabled.$assign(kFalse)
+		Do $cinst.$objs.pagePane.$objs.newBtn.$visible.$assign(kTrue)
+End Switch

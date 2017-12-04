@@ -1,0 +1,10 @@
+Do iRecordIDsList.$sessionobject.$assign(iSQLObjRef)
+Do iRecordIDsList.$select("where TableName = 'Timesheet'")
+Do iRecordIDsList.$fetch()
+If iRecordIDsList.$linecount=0
+	Do method initialiseRecords
+End If
+
+Do method buildEmpList
+Do method buildTSDetailList
+Do method buildTSList     ;; summary list

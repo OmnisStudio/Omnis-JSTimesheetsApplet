@@ -1,0 +1,20 @@
+Begin text block
+Text: {Timesheet is an Omnis applet developed using the Javascript controls.} (Carriage return)
+Text: (Carriage return)
+Text: {Function:} (Carriage return)
+Text: {The applet allows you to record a list of time spent on a specific activity for a customer} (Carriage return)
+Text: (Carriage return)
+Text: {Usage:} (Carriage return)
+Text: {Click in the grid to begin data entry.  The total hours allocated to the timesheet are automatically calculated} (Carriage return)
+Text: {After saving the timesheet, you can view all timesheets by looking at the summary data on the Summary tab}
+Text: {The droplist will allow you to select timesheets for a particular employee.  Double-click the list to view details of the timesheet} (Carriage return)
+Text: (Carriage return)
+Text: {Components:} (Carriage return)
+Text: {The SQL tables are defined using schema classes and there is also a query class that uses columns from different tables to create a view.} (Carriage return)
+Text: {The applet uses custom methods in the oSQL object class.} (Carriage return,Linefeed)
+Text: (Carriage return)
+Text: {Extending:} (Carriage return)
+Text: {The applet could be extended by assigning charges per hours and allocating different rates to each job (eg: 1.5, 2x)} (Carriage return)
+End text block
+Get text block lAboutText
+Quit method lAboutText

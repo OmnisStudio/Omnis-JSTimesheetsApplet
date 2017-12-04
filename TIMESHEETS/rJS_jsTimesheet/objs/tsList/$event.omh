@@ -1,0 +1,11 @@
+On evClick
+	
+On evDoubleClick
+	Do method handleBtns (kViewingDetail)
+	Do method viewTSDetail (pVertCell)
+	
+On evCellChanged
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

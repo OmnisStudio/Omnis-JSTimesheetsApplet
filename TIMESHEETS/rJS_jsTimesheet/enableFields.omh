@@ -1,0 +1,2 @@
+Do $cinst.$objs.pagePane.$objs.tsDetailList.$enabled.$assign(pEnable)
+Do $cinst.$objs.pagePane.$objs.TSDate.$enabled.$assign(pEnable)

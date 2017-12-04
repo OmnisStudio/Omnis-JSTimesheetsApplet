@@ -1,0 +1,20 @@
+Do lTablesForAppList.$define(lTableName)
+Do lTablesForAppList.$add("RecordIDs")
+Do lTablesForAppList.$add("Employee")
+Do lTablesForAppList.$add("Timesheet")
+Do lTablesForAppList.$add("TSDetail")
+
+Do tSQLObj.$getTables() Returns lDBTableList
+
+Calculate lTotal as lTablesForAppList.$linecount
+
+For lNum from 1 to lTotal step 1
+	Do lTablesForAppList.[lNum].$loadcols()
+	Do lDBTableList.$search(lDBTableList.TableOrViewName=lTableName)
+	Do lDBTableList.$first(kTrue)
+	If not(lDBTableList.$line)
+		Do lRow.$definefromsqlclass(con("s",lTableName))
+		Do lRow.$sessionobject.$assign(tSQLObj)
+		Do tSQLObj.$createTable(lRow) Returns lStatus
+	End If
+End For

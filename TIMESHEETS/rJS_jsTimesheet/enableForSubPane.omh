@@ -1,0 +1,6 @@
+Do $cinst.$objs.pagePane.$objs.tsDetailList.$hideselection.$assign(not(pEnable))
+Do $cinst.$objs.pagePane.$objs.tsDetailList.$enabled.$assign(pEnable)
+Do $cinst.$objs.aboutBtn.$enabled.$assign(pEnable)
+
+Do $cinst.$objs.pagePane.$enabled.$assign(pEnable)
+Do $cinst.$objs.tabStrip.$enabled.$assign(pEnable)

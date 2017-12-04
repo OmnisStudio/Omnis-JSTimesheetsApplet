@@ -1,0 +1,11 @@
+On evClick
+	Do method handleBtns (kNewRecord)
+	
+On evDoubleClick
+	
+On evCellChanged
+	Do iTSDetailList.$cols.Hours.$total() Returns iTotalHours
+	
+On evHeaderClick
+	
+On evHeadedListDisplayOrderChanged

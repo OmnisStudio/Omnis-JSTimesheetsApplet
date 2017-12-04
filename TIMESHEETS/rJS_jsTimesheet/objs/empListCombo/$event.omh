@@ -1,0 +1,15 @@
+On evClick
+	Do iEmployeeList.$loadcols()
+	
+On evAfter
+	Calculate lFirstName as cap(mid(iNewEmpName,1,pos(kSp,iNewEmpName)-1))
+	Calculate lLastName as cap(mid(iNewEmpName,pos(kSp,iNewEmpName)+1,len(iNewEmpName)))
+	
+	Do iEmployeeList.$search((iEmployeeList.C2=lFirstName)&(iEmployeeList.C3=lLastName))
+	Do iEmployeeList.$first(kTrue)
+	If not(iEmployeeList.$line)
+		Do method addEmpRecord (lFirstName,lLastName)
+		Do iEmployeeList.$merge(iEmployeeRow)
+		Do iEmployeeList.$line.$assign(iEmployeeList.$linecount)
+		Do iEmployeeList.[iEmployeeList.$line].$assigncols(,,,con(lFirstName,kSp,lLastName))
+	End If

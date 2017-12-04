@@ -1,0 +1,4 @@
+Do method buildTSDetailList
+Calculate iTotalHours as 0
+Do $cinst.$objs.pagePane.$objs.empListCombo.$enabled.$assign(kTrue)
+;  Do iEmployeeList.$line.$assign(1)

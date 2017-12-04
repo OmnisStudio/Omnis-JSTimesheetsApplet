@@ -1,0 +1,16 @@
+On evTabSelected
+	Calculate iCurrTab as pTabNumber
+	
+	If iViewingTSDetail
+		Calculate iViewingTSDetail as kFalse
+		Do method enableFields (kTrue)
+		Do method handleBtns (kNewRecord)
+	End If
+	
+	If pTabNumber=1
+		Do $cinst.$objs.pagePane.$objs.empName.$visible.$assign(kFalse)
+		
+		Do method buildTSDetailList
+		Calculate iTotalHours as 0
+		Do method getWeekEnd
+	End If

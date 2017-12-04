@@ -1,0 +1,258 @@
+{
+	"classtype": "kRemoteForm",
+	"internalversion": 548,
+	"designtaskname": "rtTask",
+	"nextident": 1022,
+	"lastgroupident": 2,
+	"cvardefs": [
+		{
+			"name": "kNewRecord",
+			"order": 1,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "1"
+		},
+		{
+			"name": "kNoEmployee",
+			"order": 4,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "-1"
+		},
+		{
+			"name": "kNoRecord",
+			"order": 2,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "0"
+		},
+		{
+			"name": "kNoTime",
+			"order": 5,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "-2"
+		},
+		{
+			"name": "kViewingDetail",
+			"order": 3,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "2"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "iAbout",
+			"order": 7,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iAboutOpen",
+			"order": 23,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "iCurrBP",
+			"order": 22,
+			"type": "kInteger",
+			"subtype": "k64bitint",
+			"sublen": 0
+		},
+		{
+			"name": "iCurrTab",
+			"order": 24,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0
+		},
+		{
+			"name": "iEmpFullName",
+			"order": 18,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iEmployeeList",
+			"order": 19,
+			"type": "kList",
+			"subtype": "sEmployee",
+			"sublen": 0
+		},
+		{
+			"name": "iEmployeeRow",
+			"order": 10,
+			"type": "kRow",
+			"subtype": "sEmployee",
+			"sublen": 0
+		},
+		{
+			"name": "iNewEmpName",
+			"order": 11,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iPicPath",
+			"order": 21,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iRecordIDsList",
+			"order": 12,
+			"type": "kList",
+			"subtype": "sRecordIDs",
+			"sublen": 0
+		},
+		{
+			"name": "iRecordIDsRow",
+			"order": 13,
+			"type": "kRow",
+			"subtype": "sRecordIDs",
+			"sublen": 0
+		},
+		{
+			"name": "iSep",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 1
+		},
+		{
+			"name": "iSplashPath",
+			"order": 20,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iSQLObjRef",
+			"order": 14,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iTimesheetList",
+			"order": 9,
+			"type": "kList",
+			"subtype": "sTimesheet",
+			"sublen": 0
+		},
+		{
+			"name": "iTimesheetRow",
+			"order": 6,
+			"type": "kRow",
+			"subtype": "sTimesheet",
+			"sublen": 0
+		},
+		{
+			"name": "iTotalHours",
+			"order": 3,
+			"type": "kNumber",
+			"subtype": "k2dp",
+			"sublen": 0
+		},
+		{
+			"name": "iTSDate",
+			"order": 16,
+			"type": "kDate",
+			"subtype": "kDatetime",
+			"sublen": 1
+		},
+		{
+			"name": "iTSDetailList",
+			"order": 17,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iTSDetailRow",
+			"order": 5,
+			"type": "kRow",
+			"subtype": "sTSDetail",
+			"sublen": 0
+		},
+		{
+			"name": "iViewingTSDetail",
+			"order": 4,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"alwaysenabledobject": "",
+		"animatelayouttransitions": false,
+		"backalpha": 255,
+		"backcolor": "kColor3DFace",
+		"backpattern": 0,
+		"cancelkeyobject": "",
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2017-11-22 17:00:09",
+		"currentlayoutbreakpoint": 600,
+		"defaultappearance": "kAppearanceiOS",
+		"desc": "",
+		"designshowmobiletitle": true,
+		"disabledefaultcontextmenu": false,
+		"editor": "",
+		"editordata": "",
+		"events": "evLayoutChanged",
+		"external": true,
+		"forecolor": "kWhite",
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 1,
+		"issupercomponent": false,
+		"layoutbreakpoints": "320,600",
+		"layouttype": "kLayoutTypeResponsive",
+		"left": 33,
+		"moddate": "2017-12-04 11:24:56",
+		"okkeyobject": "",
+		"serverlessclient": false,
+		"showascheckedout": false,
+		"showgrid": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"title": {
+			"type": 0,
+			"calc": "New remote form"
+		},
+		"top": 3,
+		"userinfo": "",
+		"version": "1",
+		"vertgrid": 8,
+		"vertscroll": false
+	},
+	"layout": {
+		"width": 904,
+		"height": 740,
+		"320": {
+			"height": 750
+		},
+		"600": {
+			"height": 750
+		}
+	}
+}

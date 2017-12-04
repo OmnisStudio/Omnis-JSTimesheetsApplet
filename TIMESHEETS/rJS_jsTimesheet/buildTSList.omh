@@ -1,0 +1,10 @@
+Do iTimesheetList.$definefromsqlclass('qTSEmp')
+Do iTimesheetList.$sessionobject.$assign(iSQLObjRef)
+Do iTimesheetList.$select()
+Do iTimesheetList.$fetch(kFetchAll)
+
+Calculate lTotal as iTimesheetList.$linecount
+For lNum from 1 to lTotal step 1
+	Calculate lEmpName as con(iTimesheetList.[lNum].FirstName,kSp,iTimesheetList.[lNum].LastName)
+	Do iTimesheetList.[lNum].$assigncols(,,lEmpName)
+End For

@@ -1,0 +1,13 @@
+On evClick
+	Do method validate Returns lErrNum
+	If lErrNum<0
+		If lErrNum=kNoEmployee
+			Calculate lStr as "No employee name selected"
+		Else
+			Calculate lStr as "No time entered"
+		End If
+		Do $cinst.$showmessage(lStr)
+	Else
+		Do iTSDetailList.$cols.Hours.$total() Returns iTotalHours     ;; ensure this is correct as it will not update if you just click on save button without clicking outside of the gridcell first
+		Do method insertTSRecord
+	End If

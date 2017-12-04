@@ -1,0 +1,7 @@
+On evClick
+	Do $cinst.$objs.pagePane.$objs.empName.$visible.$assign(kFalse)
+	Do $cinst.$objs.pagePane.$objs.empListCombo.$visible.$assign(kTrue)
+	Do method handleBtns (kNoRecord)
+	
+	Do method enableFields (kTrue)
+	Do method newRecord

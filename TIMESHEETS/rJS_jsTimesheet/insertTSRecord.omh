@@ -1,0 +1,39 @@
+Do iTimesheetRow.$sessionobject.$assign(iSQLObjRef)
+
+;  get the last recordID
+Do iSQLObjRef.$getRecordID("Timesheet",lLastNum)
+
+Calculate iTimesheetRow.ID as lLastNum+1
+
+;  update the id
+Do iSQLObjRef.$updateRecordID("Timesheet",iTimesheetRow.ID) Returns lUpdated
+
+Calculate iTimesheetRow.EmpID as iEmployeeList.EmpID
+Calculate iTimesheetRow.TSDate as iTSDate
+Calculate iTimesheetRow.TotalHours as iTotalHours
+Do iTimesheetRow.$insert() Returns lStatus
+
+If lStatus
+	;  insert the detail records
+	Do iTSDetailRow.$sessionobject.$assign(iSQLObjRef)
+	
+	;  get the last recordID
+	Do iSQLObjRef.$getRecordID("TSDetail",lLastNum)
+	Calculate iTSDetailRow.TSID as iTimesheetRow.ID
+	
+	Calculate lTotal as iTSDetailList.$linecount
+	For lNum from 1 to lTotal step 1
+		Calculate iTSDetailRow.ID as lLastNum+lNum
+		Calculate iTSDetailRow.Customer as iTSDetailList.[lNum].Customer
+		Calculate iTSDetailRow.ActDate as iTSDetailList.[lNum].ActDate
+		Calculate iTSDetailRow.Activity as iTSDetailList.[lNum].Activity
+		Calculate iTSDetailRow.Hours as iTSDetailList.[lNum].Hours
+		Do iTSDetailRow.$insert()
+	End For
+	
+	;  update the id
+	Do iSQLObjRef.$updateRecordID("TSDetail",(lLastNum+lNum)) Returns lUpdated
+	
+	;  rebuild the summary list
+	Do method buildTSList
+End If

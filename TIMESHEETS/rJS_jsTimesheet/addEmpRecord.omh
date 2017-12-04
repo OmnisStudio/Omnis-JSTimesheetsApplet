@@ -1,0 +1,14 @@
+Do iEmployeeRow.$sessionobject.$assign(iSQLObjRef)
+
+;  add a employee
+Calculate iEmployeeRow.FirstName as pFirstName
+Calculate iEmployeeRow.LastName as pLastName
+
+;  get the last recordID
+Do iSQLObjRef.$getRecordID("Employee",lLastNum)
+Calculate iEmployeeRow.EmpID as lLastNum+1
+;  update the id
+Do iSQLObjRef.$updateRecordID("Employee",iEmployeeRow.EmpID) Returns lUpdated
+
+;  create a basic record for the applet to use
+Do iEmployeeRow.$insert()

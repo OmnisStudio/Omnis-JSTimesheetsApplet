@@ -1,0 +1,19 @@
+Do iEmployeeList.$definefromsqlclass('sEmployee')
+Do iEmployeeList.$sessionobject.$assign(iSQLObjRef)
+Do iEmployeeList.$select()
+Do iEmployeeList.$fetch(kFetchAll)
+
+Do iEmployeeList.$cols.$add(iEmpFullName)
+Calculate lTotal as iEmployeeList.$linecount
+For lNum from 1 to iEmployeeList.$linecount step 1
+	Calculate iEmpFullName as con(iEmployeeList.[lNum].FirstName,kSp,iEmployeeList.[lNum].LastName)
+	Do iEmployeeList.[lNum].$assigncols(,,,iEmpFullName)
+End For
+
+If not(iEmployeeList.$linecount)
+	Do iEmployeeList.$add()
+End If
+
+Do iEmployeeList.$line.$assign(1)
+Do iEmployeeList.$loadcols()
+Calculate iNewEmpName as iEmployeeList.C4

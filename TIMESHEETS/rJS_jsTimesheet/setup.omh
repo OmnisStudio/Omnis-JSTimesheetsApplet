@@ -1,0 +1,20 @@
+If iCurrBP=320
+	Do $cinst.$objs.tabStrip.$selectedtab.$assign(3)
+	Do $cinst.$objs.tabStrip.$tabvisible.$assign(kTrue)
+	Do $cinst.$objs.tabStrip.$selectedtab.$assign(1)
+	Do $cinst.$objs.aboutBtn.$visible.$assign(kFalse)
+	Do $ctask.$getAbout() Returns iAbout
+	If iAboutOpen
+		Do $cinst.$closeAbout()
+	End If
+	
+Else
+	Do $cinst.$objs.tabStrip.$selectedtab.$assign(3)
+	Do $cinst.$objs.tabStrip.$tabvisible.$assign(kFalse)
+	Do $cinst.$objs.tabStrip.$selectedtab.$assign(1)
+	Do $cinst.$objs.aboutBtn.$visible.$assign(kTrue)
+	
+	If iCurrTab=3
+		Do $cinst.$objs.tabStrip.$currenttab.$assign(1)
+	End If
+End If

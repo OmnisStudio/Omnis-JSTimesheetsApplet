@@ -1,0 +1,18 @@
+Calculate iTotalHours as iTimesheetList.TotalHours
+Calculate iTSDate as iTimesheetList.TSDate
+
+Do method buildTSDetailList (iTimesheetList.ID)
+
+Do iEmployeeList.$search(iEmployeeList.EmpID=iTimesheetList.[pLine].EmpID)
+Do iEmployeeList.$first(kTrue)
+Do iEmployeeList.$loadcols()
+
+Do method enableFields (iViewingTSDetail)
+
+Do $cinst.$objs.tabStrip.$currenttab.$assign(1)
+
+Calculate iViewingTSDetail as kTrue
+
+Do $cinst.$objs.pagePane.$objs.empListCombo.$visible.$assign(kFalse)
+Do $cinst.$objs.pagePane.$objs.empName.$left.$assign(112)
+Do $cinst.$objs.pagePane.$objs.empName.$visible.$assign(kTrue)

@@ -1,0 +1,58 @@
+[
+	{
+		"name": "ID",
+		"ident": 32001,
+		"order": 1,
+		"type": "kInteger",
+		"subtype": "k32bitint",
+		"sublen": 0,
+		"properties": {
+			"desc": "",
+			"nonull": false,
+			"primarykey": true,
+			"userinfo": ""
+		}
+	},
+	{
+		"name": "EmpID",
+		"ident": 32002,
+		"order": 2,
+		"type": "kInteger",
+		"subtype": "k32bitint",
+		"sublen": 0,
+		"properties": {
+			"desc": "",
+			"nonull": false,
+			"primarykey": false,
+			"userinfo": ""
+		}
+	},
+	{
+		"name": "TSDate",
+		"ident": 32008,
+		"order": 3,
+		"type": "kDate",
+		"subtype": "kDatetime",
+		"sublen": 1,
+		"properties": {
+			"desc": "date of timesheet",
+			"nonull": false,
+			"primarykey": false,
+			"userinfo": ""
+		}
+	},
+	{
+		"name": "TotalHours",
+		"ident": 32009,
+		"order": 4,
+		"type": "kNumber",
+		"subtype": "k2dp",
+		"sublen": 0,
+		"properties": {
+			"desc": "total number of hours booked",
+			"nonull": false,
+			"primarykey": false,
+			"userinfo": ""
+		}
+	}
+]

@@ -1,0 +1,9 @@
+If not(iEmployeeList.$line)
+	Quit method kNoEmployee
+End If
+
+If iTotalHours<1
+	Quit method kNoTime
+End If
+
+Quit method kTrue

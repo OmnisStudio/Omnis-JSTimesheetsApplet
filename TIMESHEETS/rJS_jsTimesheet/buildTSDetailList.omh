@@ -1,0 +1,9 @@
+Do iTSDetailList.$definefromsqlclass('sTSDetail')
+Do iTSDetailList.$sessionobject.$assign(iSQLObjRef)
+If pTSID
+	Do iTSDetailList.$select(con("Where TSID = ",pTSID))
+	Do iTSDetailList.$fetch(kFetchAll)
+	Do iTSDetailList.$line.$assign(0)
+Else
+	Do iTSDetailList.$add()     ;; default line
+End If

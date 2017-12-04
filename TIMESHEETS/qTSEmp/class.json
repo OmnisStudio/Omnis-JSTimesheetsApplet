@@ -1,0 +1,19 @@
+{
+	"classtype": "kQuery",
+	"internalversion": 3,
+	"nextident": 32008,
+	"properties": {
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-02-01 16:30:39",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"extraquerytext": "where Timesheet.EmpID = Employee.EmpID",
+		"moddate": "2011-10-07 16:33:59",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1"
+	}
+}
